@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
@@ -15,6 +14,7 @@ import {
   Shield,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useSidebar } from "@/context/SidebarContext";
 
 const navItems = [
   { label: "Dashboard", href: "/", icon: LayoutDashboard },
@@ -25,7 +25,7 @@ const navItems = [
 ];
 
 export function Sidebar() {
-  const [collapsed, setCollapsed] = useState(false);
+  const { collapsed, toggle } = useSidebar();
   const pathname = usePathname();
 
   return (
@@ -84,7 +84,7 @@ export function Sidebar() {
       </nav>
 
       <button
-        onClick={() => setCollapsed(!collapsed)}
+        onClick={toggle}
         className="m-3 flex items-center justify-center rounded-lg border border-gray-800 p-2 text-gray-400 transition-colors hover:bg-gray-800 hover:text-white"
       >
         {collapsed ? (

@@ -36,7 +36,7 @@ export interface AIInsight {
 
 export interface PredictionDataPoint {
   month: string;
-  actual: number;
+  actual: number | null;
   predicted: number;
 }
 
