@@ -62,11 +62,11 @@ export const predictionData: PredictionDataPoint[] = [
   { month: "Aug 24", actual: 73, predicted: 73 },
   { month: "Sep 24", actual: 74, predicted: 74 },
   { month: "Oct 24", actual: 75, predicted: 75 },
-  { month: "Nov 24", actual: 0, predicted: 77 },
-  { month: "Dec 24", actual: 0, predicted: 78 },
-  { month: "Jan 25", actual: 0, predicted: 80 },
-  { month: "Feb 25", actual: 0, predicted: 82 },
-  { month: "Mar 25", actual: 0, predicted: 84 },
+  { month: "Nov 24", actual: null, predicted: 77 },
+  { month: "Dec 24", actual: null, predicted: 78 },
+  { month: "Jan 25", actual: null, predicted: 80 },
+  { month: "Feb 25", actual: null, predicted: 82 },
+  { month: "Mar 25", actual: null, predicted: 84 },
 ];
 
 export const resourceAllocation: ResourceAllocationItem[] = [
